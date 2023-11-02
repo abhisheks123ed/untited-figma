@@ -1,0 +1,35 @@
+<div class="code-container">
+  <div class="form-container">
+    <div class="px-5 py-5 ">
+      <div class="form-img">
+        <img src="../../../assets/images/Towercap logo.svg">
+      </div>
+      <div class="form">
+        <div class="msg">VERIFY EMAIL</div>
+        <h2 class="heading">Check Your Email To Continue</h2>
+        <h4>We've Send An Email To User@Company.Com</h4>
+        <form class="login-form"  [formGroup]="codeVerification" (ngSubmit)="sendVerCode()">
+          <div>
+            <mat-label>Enter The Verification Code</mat-label><br>
+            <input matInput placeholder="Enter code" type="email" class="code"  formControlName="code">
+            <mat-error *ngIf="(isSubmitted || this.codeVerification.controls['code'].touched) && this.codeVerification.controls['code'].errors?.['required']">
+              Verification code is required.
+            </mat-error>
+            <mat-error *ngIf="(isSubmitted || this.codeVerification.controls['code'].touched) && this.codeVerification.controls['code'].errors?.['verCode']">
+             Verification Code is inCorrect
+            </mat-error>
+          </div>
+          <div>
+            <p>Can't Find The Email? Make Sure To Check Your Spam Folder</p>
+          </div>
+          <div>
+            <button mat-raised-button color="primary" class="login-button" [disabled]="codeVerification.invalid">CONTINUE</button>
+          </div>
+          <div>
+            <button mat-raised-button class="login-button2" (click)="resendCode()">RESEND CODE</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

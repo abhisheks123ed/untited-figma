@@ -1,0 +1,135 @@
+.code-container {
+    text-align: center;
+  
+    .form-container {
+      .msg{
+        text-align: center;
+        color: white;
+        font-weight: 500;
+        background-color: #66B3BB;
+        padding: 9px;
+        font-size: 17px;
+        margin: 0.5rem 0;
+      }
+      h2 {
+        margin-bottom: 5px;
+        color: #66B3BB;
+      }
+  
+      width: 50%;
+      margin: auto;
+      background: #ededed;
+  
+      .form-img {
+        border-bottom: 2px solid #66B3BB;
+  
+        img {
+          width: 215px;
+          height: 138px;
+        }
+      }
+      .form {
+        padding: 1rem 0;
+        .form-links {
+          margin: 1rem 0 0 0;
+          color: #66B3BB;
+  
+          a {
+            color: #66B3BB;
+          }
+  
+        }
+  
+        .login-button {
+          padding: 24px 61px;
+          margin: 1rem 0;
+            border-radius: 12px;
+            font-size: 15px;
+          background-color: #38527D;
+  
+        }
+        .login-button2 {
+            padding: 24px 46px;
+            border-radius: 12px;
+            font-size: 15px;
+            background-color: white;
+            border: 2px solid #38527D;
+            color: #38527D;
+          }
+      }
+      mat-label {
+        font-size: 16px;
+      }
+      mat-error{
+        display: block;
+      }
+    }
+  }
+  input {
+    border: 2px solid #66B3BB;
+    border-radius: 10px;
+    width: 50%;
+    padding: 7px;
+    margin: 8px 0;
+  }
+  input:focus {
+    border: 2px solid #66B3BB;
+  }
+  input::placeholder {
+    text-align: center;
+  }
+
+  @media (max-width: 767px) {
+    .code-container{
+    
+      .form-container {
+        .msg{
+          padding: 6px;
+          font-size: 15px;
+        }
+        width: 65%;
+      }
+      .form{
+        .login-form{
+          .login-button {
+            padding: 19px 52px;
+          }
+          .login-button2 {
+              padding: 18px 39px;
+            }
+        }
+      }
+      input{
+        width: 69%;
+      }
+    }
+
+ 
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+.code-container{
+
+  .form-container {
+    width: 60%;
+    .msg{
+      padding: 6px;
+      font-size: 15px;
+    }
+    .form{
+      .login-form{
+        .login-button {
+          padding: 21px 52px;
+        }
+        .login-button2 {
+            padding: 18px 39px;
+          }
+      }
+    }
+  }
+  input {
+    padding: 5px;
+    width: 69%;
+  }
+}
+}

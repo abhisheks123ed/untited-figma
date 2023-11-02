@@ -1,0 +1,54 @@
+<div class="signIn-container">
+  <div class="form-container">
+    <div class="px-5 pb-2">
+      <div class="form-img">
+        <img src="../../../assets/images/Towercap logo.svg">
+      </div>
+      <div class="form">
+        <h2 class="heading">SIGN IN TO TOWERCAP</h2>
+        <form [formGroup]="loginForm" (ngSubmit)="submitForm()">
+          <div>
+            <mat-label>Email Address <span>*</span></mat-label><br>
+            <input matInput placeholder="Enter email" type="email" formControlName="email"> 
+            <mat-error *ngIf="(isSubmitted || this.loginForm.controls['email'].touched) && this.loginForm.controls['email'].errors?.['required']">
+              Email is required.
+            </mat-error>
+            <mat-error *ngIf="(isSubmitted || this.loginForm.controls['email'].touched) && this.loginForm.controls['email'].errors?.['email']">
+              Invalid email format.
+            </mat-error>
+          </div>
+          <div>
+            <mat-label>Password <span>*</span></mat-label><br>
+            <input matInput placeholder="Enter password" type="password" formControlName="password">
+            <mat-error *ngIf="(isSubmitted || this.loginForm.controls['password'].touched) && this.loginForm.controls['password'].errors?.['required']">
+              Password is required.
+            </mat-error>
+            <mat-error *ngIf="(isSubmitted || this.loginForm.controls['password'].touched) && this.loginForm.controls['password'].errors?.['minlength']">
+              Password must be at least 6 characters long.
+            </mat-error>
+          </div>
+          <button mat-raised-button color="primary" class="login-button" [disabled]="loginForm.invalid">Login</button>
+          <div class="form-links">
+            <a routerLink="ForgetPasword">I Forget My Password</a> or <a href="#">I Forget My Email</a>
+          </div>
+        </form>
+      </div>
+      <div class="pt-2">
+        <h2 class="heading">REGISTER AS A NEW TOWERCAP APPLICANT</h2>
+        <form class="login-form" [formGroup]="loginForm2" (ngSubmit)="submitNewUser()">
+          <div>
+            <mat-label>Email New Email Address <span>*</span></mat-label><br>
+            <input matInput placeholder="Enter email" type="email" formControlName="newEmail"> 
+            <mat-error *ngIf="(isSubmitted || this.loginForm2.controls['newEmail'].touched) && this.loginForm2.controls['newEmail'].errors?.['required']">
+              Email is required.
+            </mat-error>
+            <mat-error *ngIf="(isSubmitted || this.loginForm2.controls['newEmail'].touched) && this.loginForm2.controls['newEmail'].errors?.['email']">
+              Invalid email format.
+            </mat-error>
+          </div>
+          <button mat-raised-button class="login-button2"  [disabled]="loginForm2.invalid">REGISTER NEW PROFILE</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

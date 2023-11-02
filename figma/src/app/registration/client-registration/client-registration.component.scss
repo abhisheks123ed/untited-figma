@@ -1,0 +1,87 @@
+.client-container{
+  background: #ededed;
+  
+    .form-container {
+      .msg{
+        text-align: center;
+        color: white;
+        font-weight: 500;
+        background-color: #66B3BB;
+        padding: 9px;
+        font-size: 17px;
+        margin: 0.5rem 0;
+      }
+      width: 50%;
+      margin: auto;
+      .form-img {
+        border-bottom: 2px solid #66B3BB;
+        text-align: center;
+        
+        img {
+          width: 215px;
+          height: 138px;
+        }
+      }
+      .form {
+        padding: 1rem 0;
+        .login-button {
+          padding: 22px 125px;
+          border-radius: 12px;
+          font-size: 16px;
+          background-color: #38527D;
+           margin: 2rem 0 0 0;
+        }
+      }
+      
+      mat-label {
+        font-size: 14px;
+      }
+      mat-error{
+        display: block;
+      }
+    }
+  }
+  input {
+    border: 2px solid #66B3BB;
+    border-radius: 10px;
+    padding: 7px;
+    margin: 8px 0;
+    width: 100%;
+  }
+  input:focus {
+    border: 2px solid #66B3BB;
+  }
+  input::placeholder {
+    padding: 5px;
+  }
+
+  @media (max-width: 767px) {
+      .client-container{
+      
+        .form-container {
+          .msg{
+            padding: 6px;
+            font-size: 15px;
+          }
+          width: 65%;
+        }
+      }
+   
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .client-container{
+  
+    .form-container {
+      .msg{
+        padding: 6px;
+        font-size: 15px;
+      }
+      width: 60%;
+    }
+    input {
+      padding: 5px;
+    }
+  }
+}
+
